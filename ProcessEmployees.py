@@ -14,23 +14,32 @@ import csv
 
 #open the file
 
-
+outfile = open("employee_data.csv", 'r')
 
 
 #create an empty dictionary
 
+tsemp = {}
+check = csv.reader(outfile, delimiter=',')
+tsemp
+
+
 
 #use a loop to iterate through the csv file
-
+for x in check:
 
     #check if the employee fits the search criteria
+    if x == "TS":
+        print(x)
 
-
-    
-
+"""
+print(f"Employee Name: {} Current Salary: ${}")
+print(f"Employee Name: {} Current Salary: ${}")
 print()
 print('=========================================')
 print()
+print(f"Employee Name: {} Current Salary: ${}")
+print(f"Employee Name: {} Current Salary: ${}")
 
 #iternate through the dictionary and print out the key and value as per image
 
@@ -42,8 +51,9 @@ print()
 print()
 print('=========================================')
 print()
-
+print(f"Total Increase in salary: ${}")
 #print out the total difference between the old salary and the new salary as per image.
 
         
-    
+"""
+outfile.close()
